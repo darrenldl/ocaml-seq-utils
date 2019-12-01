@@ -36,15 +36,15 @@ Extension to Seq module of OCaml Stdlib
         - ~~`fold_left2`~~
 
     - Sequence scanning
-        - `for_all`
+        - ~~`for_all`~~
 
-        - `exists`
+        - ~~`exists`~~
 
-        - `for_all2`
+        - ~~`for_all2`~~
 
-        - `exists2`
+        - ~~`exists2`~~
 
-        - `mem`
+        - ~~`mem`~~
 
     - Sequence searching
 

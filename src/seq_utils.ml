@@ -53,3 +53,31 @@ let rec fold_left2 (f : 'a -> 'b -> 'c -> 'a) (acc : 'a) (s1 : 'b Seq.t) (s2 : '
   | Seq.Cons (x1, rest1), Seq.Cons (x2, rest2) ->
     let acc = f acc x1 x2 in
     fold_left2 f acc rest1 rest2
+
+let rec for_all (f : 'a -> bool) (s : 'a Seq.t) : bool =
+  match s () with
+  | Seq.Nil -> true
+  | Seq.Cons (x, rest) ->
+    f x && for_all f rest
+
+let rec exists (f : 'a -> bool) (s : 'a Seq.t) : bool =
+  match s () with
+  | Seq.Nil -> false
+  | Seq.Cons (x, rest) ->
+    f x || exists f rest
+
+let rec for_all2 (f : 'a -> 'b -> bool) (s1 : 'a Seq.t) (s2 : 'b Seq.t) : bool =
+  match s1 (), s2 () with
+  | Seq.Nil, Seq.Nil -> true
+  | Seq.Nil, _ | _, Seq.Nil -> raise (Invalid_argument "Seq_utils.for_all2")
+  | Seq.Cons (x1, rest1), Seq.Cons (x2, rest2) ->
+    f x1 x2 && for_all2 f rest1 rest2
+
+let rec exists2 (f : 'a -> 'b -> bool) (s1 : 'a Seq.t) (s2 : 'b Seq.t) : bool =
+  match s1 (), s2 () with
+  | Seq.Nil, Seq.Nil -> false
+  | Seq.Nil, _ | _, Seq.Nil -> raise (Invalid_argument "Seq_utils.for_all2")
+  | Seq.Cons (x1, rest1), Seq.Cons (x2, rest2) ->
+    f x1 x2 || exists2 f rest1 rest2
+
+let mem e s = exists (fun x -> x = e) s
