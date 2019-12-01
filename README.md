@@ -14,26 +14,26 @@ Extension to Seq module of OCaml Stdlib
 - Functions
 
     - Basic
+    
+        - ~~`cons`~~`
 
-        - `append`
+        - ~~`append`~~
 
-        - `concat`
+        - ~~`concat`~~
 
     - Iterators
 
-        - `iteri`
+        - ~~`iteri`~~
 
-        - `mapi`
-
-        - `map2`
+        - ~~`mapi`~~
 
     - Iterators on two sequences
 
-        - `iter2`
+        - ~~`iter2`~~
 
-        - `map2`
+        - ~~`map2`~~
 
-        - `fold_left2`
+        - ~~`fold_left2`~~
 
     - Sequence scanning
         - `for_all`

@@ -1,0 +1,17 @@
+lib: [
+  "_build/install/default/lib/seq_utils/META"
+  "_build/install/default/lib/seq_utils/dune-package"
+  "_build/install/default/lib/seq_utils/opam"
+  "_build/install/default/lib/seq_utils/seq_utils.a"
+  "_build/install/default/lib/seq_utils/seq_utils.cma"
+  "_build/install/default/lib/seq_utils/seq_utils.cmi"
+  "_build/install/default/lib/seq_utils/seq_utils.cmt"
+  "_build/install/default/lib/seq_utils/seq_utils.cmx"
+  "_build/install/default/lib/seq_utils/seq_utils.cmxa"
+  "_build/install/default/lib/seq_utils/seq_utils.cmxs"
+  "_build/install/default/lib/seq_utils/seq_utils.ml"
+]
+doc: [
+  "_build/install/default/doc/seq_utils/LICENSE"
+  "_build/install/default/doc/seq_utils/README.md"
+]
