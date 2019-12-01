@@ -2,13 +2,14 @@
 Extension to Seq module of OCaml Stdlib
 
 ## TODO
+
 - Infinite sequences
 
     - Natural numbers, modulo, ...
 
 - Finite sequences
 
-    - `[0, n)`, `[0, 0]`, ...
+    - `[0, n)`, `[0, n]`, ...
 
 - Functions
 
